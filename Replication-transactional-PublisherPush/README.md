@@ -4,7 +4,7 @@
 
 2. "CreatePublication.sql" to be run on Publisher instance. The database name to be distributed needs to be configured in script. Uses the default replication path* (unless otherwise stated). Ensure SQL Server Agent account has access to path.
 
-3. Create subscription database on Subscriber instance.
+3. Create subscription database on Subscriber instance. This is the database that will be populated by SQL replication. Ensure database owner is set to SA.
 
 4. "NewSubscription.sql" to be run on Publisher instance. @subscriber_security_mode parameter determines if subscriber uses windows authentication ("1") or SQL server authentication ("0"), which is followed by @subscriber_login or @subscriber_password for SQL authentication.
 
